@@ -33,7 +33,7 @@ class TestChatServer: public CppUnit::TestFixture
 {
 	ChatServer* m_chatServerObj;
     CPPUNIT_TEST_SUITE(TestChatServer);
-  //  CPPUNIT_TEST(testAddition);
+     CPPUNIT_TEST(testAcceptConnection);
     //CPPUNIT_TEST(testMultiply);
     CPPUNIT_TEST_SUITE_END();
 	public:

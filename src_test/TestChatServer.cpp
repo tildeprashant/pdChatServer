@@ -30,6 +30,11 @@ void TestChatServer::tearDown() {
 
 void TestChatServer::testAcceptConnection()
 {
-	m_chatServerObj->acceptConnection();
-	CPPUNIT_ASSERT(true);
+	 std::ostringstream out;
+	 /* boilerplate code to capture console output for unit test Start */
+	 std::streambuf* orig_buf(std::cout.rdbuf(out.rdbuf()));
+	 m_chatServerObj->acceptConnection();
+	 std::cout.rdbuf(orig_buf);
+	 /* boilerplate code to capture console output for unit test End */
+	 CPPUNIT_ASSERT(out.str() == "connection accepted\n");
 }
